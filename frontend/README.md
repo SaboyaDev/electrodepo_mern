@@ -1,3 +1,3 @@
-# ElectroDepot - MERN E-commerce Store
+# ElectroDepotUSA - MERN E-commerce Store
 
 ### Coming Soon...
