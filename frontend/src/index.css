@@ -14,6 +14,8 @@ code {
 
 body {
 	font-family: 'Cabin', sans-serif;
+	background-color: #fff !important;
+	/* background-color: #f9f9f9 !important; */
 	/* font-size: 62.5%; */
 	/* font-weight: 400; */
 }
@@ -41,11 +43,46 @@ nav.bg-dark {
 	background-color: black !important;
 }
 
+.navbar {
+	padding: 0.7rem 0;
+}
+
+/* NAVBAR ICONS */
 .fas {
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
 }
 
-.navbar {
-	padding: 0.7rem 0;
+/* STAR RATING */
+.rating span > i {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.rating .rating-text {
+	margin-left: 0.4rem;
+}
+
+.card {
+	background-color: #fff !important;
+	border-radius: 0 5px 5px 0 !important;
+}
+
+.rounded.card {
+	box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2) !important;
+	border: none;
+	padding: 3.5rem 2rem 3rem !important;
+}
+
+a .card-img-top {
+	height: 15.62rem !important;
+}
+
+.card-body {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+a {
+	text-decoration: none;
 }
