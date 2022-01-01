@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import Logo from '../transparent_logo_dark.png';
 
@@ -8,7 +7,7 @@ const Header = () => {
 			<Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
 				<Container>
 					<Navbar.Brand href='/'>
-						<img src={Logo} alt='electro depot logo' height='60' />
+						<img src={Logo} alt='electro depot logo' height='50' />
 					</Navbar.Brand>
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
 					<Navbar.Collapse id='basic-navbar-nav'>

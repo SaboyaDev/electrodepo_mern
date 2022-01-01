@@ -69,9 +69,19 @@ nav.bg-dark {
 }
 
 .rounded.card {
-	box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2) !important;
-	border: none;
+	/* box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2) !important; */
+	border: 2px solid #f8f8f8;
 	padding: 3.5rem 2rem 3rem !important;
+	cursor: pointer;
+	transition: all 0.4s;
+	transform: translate3d(0, 0, 0);
+}
+
+.rounded.card:hover {
+	transform: translateY(-7px) scale(1.02);
+	box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+	border: 1px solid #f8f8f8;
+	/* backface-visibility: hidden; */
 }
 
 a .card-img-top {
