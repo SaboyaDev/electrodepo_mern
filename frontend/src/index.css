@@ -13,22 +13,28 @@ code {
 } */
 
 body {
-	font-family: 'Cabin', sans-serif;
+	font-family: 'Lato', sans-serif;
 	background-color: #fff !important;
 	/* background-color: #f9f9f9 !important; */
 	/* font-size: 62.5%; */
-	/* font-weight: 400; */
+	font-weight: 400;
 }
 
 h1,
+.h1,
 h2,
+.h2,
 h3,
+.h3,
 h4,
-h5 {
-	font-family: 'Roboto Condensed', sans-serif;
+.h4,
+h5,
+.h5 h6,
+.h5 {
+	font-family: 'Lato', sans-serif;
 	font-weight: 700;
-	letter-spacing: 0.1rem;
-	text-transform: none;
+	letter-spacing: 0;
+	/* text-transform: none; */
 }
 
 button {
@@ -45,6 +51,10 @@ nav.bg-dark {
 
 .navbar {
 	padding: 0.7rem 0;
+}
+
+.nav-link:last-child {
+	padding-right: 0 !important;
 }
 
 /* NAVBAR ICONS */
@@ -91,8 +101,19 @@ a .card-img-top {
 .card-body {
 	padding-left: 0;
 	padding-right: 0;
+	padding-bottom: 0;
 }
 
 a {
 	text-decoration: none;
+}
+
+.btn-outline-dark:hover {
+	background-color: black;
+	border-color: black;
+}
+
+.btn-group-lg > .btn,
+.btn-lg {
+	padding: 0.875rem 1.5rem !important;
 }
