@@ -82,7 +82,7 @@ const products = [
 ];
 
 // This is Common JS
-module.exports = products;
+// module.exports = products;
 
 // this is ES Module
-// export default products;
+export default products;
