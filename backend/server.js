@@ -1,8 +1,12 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import connectDB from './config/db.js';
+import colors from 'colors';
+
 import products from './data/products.js';
 
 dotenv.config();
+connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -23,7 +27,7 @@ app.get('/api/products/:id', (req, res) => {
 app.listen(
 	PORT,
 	console.log(
-		`SERVER RUNNING ON ${process.env.NODE_ENV} mode on port: ${PORT}. 
-		 Launch it here --> http://localhost:${PORT}`
+		`\nSERVER RUNNING ON ${process.env.NODE_ENV} mode on port: ${PORT} Launch it here --> http://localhost:${PORT}\n`
+			.yellow.bold
 	)
 );
