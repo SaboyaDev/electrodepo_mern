@@ -1,9 +1,9 @@
-import mongoose, { Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
 
-const oderSchema = Schema(
+const orderSchema = new mongoose.Schema(
 	{
 		user: {
-			type: Schema.Types.ObjectId,
+			type: mongoose.Schema.Types.ObjectId,
 			required: true,
 			ref: 'User',
 		},
@@ -14,7 +14,7 @@ const oderSchema = Schema(
 				image: { type: String, required: true },
 				price: { type: Number, required: true },
 				product: {
-					type: Schema.Types.ObjectId,
+					type: mongoose.Schema.Types.ObjectId,
 					required: true,
 					ref: 'Product',
 				},
@@ -70,6 +70,6 @@ const oderSchema = Schema(
 	}
 );
 
-const Order = model('Order', orderSchema);
+const Order = mongoose.model('Order', orderSchema);
 
 export default Order;

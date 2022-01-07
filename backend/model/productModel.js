@@ -1,10 +1,15 @@
-import mongoose, { Schema } from 'mongoose';
-import Review from './reviewModel.js';
+import mongoose from 'mongoose';
 
-const productSchema = new Schema({
+const reviewSchema = new mongoose.Schema({
+	name: { type: String, required: true },
+	rating: { type: Number, required: true },
+	comment: { type: String, required: true },
+});
+
+const productSchema = new mongoose.Schema({
 	// Which Admin User Added the product
 	user: {
-		type: Schema.Types.ObjectId,
+		type: mongoose.Schema.Types.ObjectId,
 		required: true,
 		ref: 'User',
 	},
