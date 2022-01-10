@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import { LinkContainer } from 'react-router-bootstrap'
 
-import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
+import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 
-import Rating from '../components/Rating';
+import Rating from '../components/Rating'
 
-const ProductPage = () => {
-	const [product, setProduct] = useState([]);
-	let { productId } = useParams();
+const ProductPage = ({ match }) => {
+	const [product, setProduct] = useState([])
 
 	useEffect(() => {
 		const fetchProduct = async () => {
 			try {
-				const { data } = await axios.get(`/api/products/${productId}`);
-				setProduct(data);
+				const { data } = await axios.get(
+					`/api/products/${match.params.productId}`
+				)
+				setProduct(data)
 			} catch (err) {
-				console.error(err);
+				console.error(err)
 			}
-		};
-		fetchProduct();
-	}, []);
+		}
+		fetchProduct()
+	}, [match])
 
 	return (
 		<>
@@ -85,7 +85,7 @@ const ProductPage = () => {
 				</Col>
 			</Row>
 		</>
-	);
-};
+	)
+}
 
-export default ProductPage;
+export default ProductPage
