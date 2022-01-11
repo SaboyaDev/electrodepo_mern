@@ -13,7 +13,7 @@ router.get(
 		const products = await Product.find({})
 
 		res.json(products)
-		console.log(products)
+		// console.log(products)
 	})
 )
 
@@ -23,11 +23,14 @@ router.get(
 router.get(
 	'/:productId',
 	asyncHandler(async (req, res, next) => {
-		const product = await Product.findById(req.params.id)
+		const product = await Product.findById(req.params.productId)
 
 		if (product) {
 			res.json(product)
-		} else res.status(404).json({ message: 'Product not found' })
+		} else {
+			res.status(404)
+			throw new Error('Product not found')
+		}
 	})
 )
 

@@ -1,9 +1,10 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
-import colors from 'colors'
-
 import productRoutes from './routes/productRoutes.js'
+import { notFound, errorHandler } from './middleware/errorMiddleware.js'
+
+import colors from 'colors'
 
 dotenv.config()
 
@@ -17,6 +18,13 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/products', productRoutes)
+
+// Error Middlewares - Will over-write the default Error handling
+app.use(notFound)
+
+// Handles 200 code front-end
+// But a 500 error code (server error)
+app.use(errorHandler)
 
 app.listen(
 	PORT,
