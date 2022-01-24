@@ -1,8 +1,9 @@
-import { LinkContainer } from 'react-router-bootstrap';
-import { Card } from 'react-bootstrap';
-import Rating from './Rating';
+import { LinkContainer } from 'react-router-bootstrap'
+import { Card } from 'react-bootstrap'
+import Rating from './Rating'
 
 const Product = ({ product }) => {
+	console.log(product)
 	return (
 		<Card className='my-3 p-3 rounded text-center'>
 			<LinkContainer to={`/product/${product._id}`}>
@@ -29,7 +30,7 @@ const Product = ({ product }) => {
 				</Card.Text>
 			</Card.Body>
 		</Card>
-	);
-};
+	)
+}
 
-export default Product;
+export default Product
